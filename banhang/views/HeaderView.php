@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-3 col-sm-3 col-xs-12">
-          <div class="logo"><a title="ecommerce Template" href="home"><img alt="ecommerce Template" src="assets\frontend\images\logo.png"></a></div>
+          <div class="logo"><a title="ecommerce Template" href="index.php"><img alt="ecommerce Template" src="assets\frontend\images\logo.png"></a></div>
           <div class="nav-icon">
             <div class="mega-container visible-lg visible-md visible-sm">
               <div class="navleft-container">
@@ -17,25 +17,22 @@
                       <div class="wrap-popup column1">
                         <div class="popup">
                           <ul class="nav">
-                           <?php 
-                                //co the ket noi csdl de truy van o day
-                           $conn = Connection::getInstance();
-                           $query = $conn->query("select * from categories where parent_id = 0 order by id desc");
-                           $categories = $query->fetchAll(PDO::FETCH_OBJ);
-                           ?>
-                           <?php foreach($categories as $rows): ?>
-                            <li><a href="products/category/<?php echo $rows->id; ?>/<?php echo Unicode::removeUnicode($rows->name); ?>"><?php echo $rows->name; ?></a></li>
-
-
-
-                            <?php 
-                            $querySub = $conn->query("select * from categories where parent_id = {$rows->id} order by id desc");
-                            $categoriesSub = $querySub->fetchAll(PDO::FETCH_OBJ);
-                            ?>
-                            <?php foreach($categoriesSub as $rowsSub): ?>
-                             <li style="padding-left:20px;"><a href="products/category/<?php echo $rowsSub->id; ?>/<?php echo Unicode::removeUnicode($rows->name); ?>"><?php echo $rowsSub->name; ?></a></li>
-                            <?php endforeach; ?>
-                          <?php endforeach; ?>
+                          <?php 
+              //co the ket noi csdl de truy van o day
+              $conn = Connection::getInstance();
+              $query = $conn->query("select * from categories where parent_id = 0 order by id desc");
+              $categories = $query->fetchAll(PDO::FETCH_OBJ);
+             ?>
+             <?php foreach($categories as $rows): ?>
+            <li><a href="index.php?controller=products&action=category&id=<?php echo $rows->id; ?>"><?php echo $rows->name; ?></a></li>
+            <?php 
+              $querySub = $conn->query("select * from categories where parent_id = {$rows->id} order by id desc");
+              $categoriesSub = $querySub->fetchAll(PDO::FETCH_OBJ);
+             ?>
+             <?php foreach($categoriesSub as $rowsSub): ?>
+            <li style="padding-left:20px;"><a href="index.php?controller=products&action=category&id=<?php echo $rowsSub->id; ?>"><?php echo $rowsSub->name; ?></a></li>
+              <?php endforeach; ?>
+            <?php endforeach; ?>
                         </ul>
                       </div>
                     </div>
@@ -46,7 +43,7 @@
               </div>
               <div class="mega-menu-category">
                 <ul class="nav">
-                  <li><a href="news">Tin tức</a>
+                  <li><a href="index.php?controller=news">Tin tức</a>
 
                   </li>
 
@@ -55,7 +52,7 @@
               </div>
               <div class="mega-menu-category">
                 <ul class="nav">
-                  <li><a href="cart">Giỏ Hàng</a>
+                  <li><a href="index.php?controller=cart">Giỏ Hàng</a>
 
                   </li>
 
@@ -65,7 +62,7 @@
 
               <div class="mega-menu-category">
                 <ul class="nav">
-                  <li><a href="contact">Liên Hệ</a>
+                  <li><a href="index.php?controller=contact">Liên Hệ</a>
 
                   </li>
 

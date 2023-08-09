@@ -171,6 +171,7 @@ self::$fileLayout = "LayoutTrangTrong.php";
         </div>
         <div class="sidebar col-sm-3 col-xs-12 col-sm-pull-9">
           <aside class="sidebar">
+            <!-- 
             <div class="block block-layered-nav">
               <div class="block-title">
                 <h3>Shop By</h3>
@@ -281,7 +282,8 @@ self::$fileLayout = "LayoutTrangTrong.php";
                   </dd>
                 </dl>
               </div>
-            </div>
+
+            </div>  -->
           <!--   <div class="block product-price-range ">
               <div class="block-title">
                 <h3>Price</h3>
@@ -321,6 +323,7 @@ self::$fileLayout = "LayoutTrangTrong.php";
                 </div>
               </div>
             </div> -->
+
              <div class="panel panel-default" style="margin-top:15px;">
           <div class="panel-heading"> Tìm theo mức giá </div>
           <div class="panel-body">
@@ -340,7 +343,7 @@ self::$fileLayout = "LayoutTrangTrong.php";
 
 
             
-           
+            <!-- 
             <div class="block block-compare">
               <div class="block-title ">Compare Products (2)</div>
               <div class="block-content">
@@ -454,6 +457,8 @@ self::$fileLayout = "LayoutTrangTrong.php";
                 <div class="actions"> <a href="#" class="view-all">View All Tags</a> </div>
               </div>
             </div>
+
+          -->
           </aside>
         </div>
       </div>

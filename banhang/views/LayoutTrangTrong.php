@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <base href="http://localhost/devpro/php60/sss/php60_project_session17/php60_project/">
+ 
 <meta charset="utf-8">
 <!--[if IE]>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
